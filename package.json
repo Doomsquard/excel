@@ -1,0 +1,24 @@
+{
+  "name": "excelproj",
+  "version": "1.0.0",
+  "description": "",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Doomsquard/excel.git"
+  },
+  "keywords": [
+    "js",
+    "javascript",
+    "excel"
+  ],
+  "author": "Vladizlav Zhilinsky <zhilinsky99@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Doomsquard/excel/issues"
+  },
+  "homepage": "https://github.com/Doomsquard/excel#readme"
+}
