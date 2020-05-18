@@ -22,6 +22,14 @@ class Dom {
 	off(eventType, callback) {
 		this.$el.removeEventListener(eventType, callback);
 	}
+
+	closest(selector) {
+		return $(this.$el.closest(selector));
+	}
+	getAtribute() {
+		return $(this.$el.getBoundingClientRect());
+	}
+
 	// element js
 	append(node) {
 		if (node instanceof Dom) {
