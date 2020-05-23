@@ -53,8 +53,43 @@ class Dom {
 		return this.$el.getBoundingClientRect();
 	}
 
+	classAdd(selector) {
+		this.$el.classList.add(selector);
+	}
+	classRemove(selector) {
+		this.$el.classList.remove(selector);
+	}
+
 	findAll(selector) {
 		return this.$el.querySelectorAll(selector);
+	}
+	find(selector) {
+		return $(this.$el.querySelector(selector));
+	}
+	id(parse) {
+		if (parse) {
+			const parsed = this.id().split(':');
+
+			return {
+				row: +parsed[0],
+				col: +parsed[1],
+			};
+		}
+		return this.data.id;
+	}
+	focus() {
+		this.$el.focus();
+		return this;
+	}
+	text(text) {
+		if (typeof text === 'string') {
+			this.$el.textContent = text;
+			return this;
+		}
+		if (this.$el.tagName.toLowerCase() === 'input') {
+			return this.$el.value.trim();
+		}
+		return this.$el.textContent.trim();
 	}
 
 	css(styles = {}) {
